@@ -9,10 +9,10 @@ phases:
     - echo Logging in to Amazon ECR....
     - aws --version
     # login to Elastic container registry
-    - eval $(aws ecr get-login --region us-west-1 --no-include-email | sed 's|https://||')
-    - REPOSITORY_URI=291526921916.dkr.ecr.us-west-1.amazonaws.com/nn-app-backend
+    - eval $(aws ecr get-login --region ap-south-1 --no-include-email | sed 's|https://||')
+    - REPOSITORY_URI=862526026795.dkr.ecr.ap-south-1.amazonaws.com/aws-ci-cd-laravel
     - IMAGE_TAG=1.0
-    - IMAGE_NAME=nn-app-backend-container
+    - IMAGE_NAME=aws-ci-cd-laravel
   build:
     commands:
     - echo Build started on `date`
